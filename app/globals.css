@@ -1,27 +1,28 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@layer utilities {
+  @variants responsive {
+    /* Hide scrollbar for Chrome, Safari and Opera */
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+    /* Hide scrollbar for IE, Edge and Firefox */
+    .no-scrollbar {
+      -ms-overflow-style: none; /* IE and Edge */
+      scrollbar-width: none; /* Firefox */
+    }
   }
 }
-
+@layer components {
+  .heroBtn {
+    @apply px-6 py-2 border border-[#1b1b1b82] rounded-full uppercase tracking-widest text-gray-500 text-xs hover:text-green-300/40 hover:border-green-300/40 transition-all duration-300 ease-in-out;
+  }
+}
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  @apply no-scrollbar;
+}
+* {
+  scroll-behavior: smooth;
 }
