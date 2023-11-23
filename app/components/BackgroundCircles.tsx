@@ -2,7 +2,8 @@ import { motion } from "framer-motion";
 type Props = {};
 
 function BackgroundCircles({}: Props) {
-  const sharedStyles = "absolute border border-[#1e1714]  rounded-full mt-52 ";
+  const sharedStyles =
+    "absolute border border-[#1e1714]  rounded-full  aspect-square ";
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -12,15 +13,14 @@ function BackgroundCircles({}: Props) {
         borderRadius: ["20%", "20%", "50%", "80%", "20%"],
       }}
       transition={{ duration: 2.5 }}
-      className="relative flex justify-center items-center"
+      className="relative flex justify-center items-center mt-[240px]"
     >
-      <div className={sharedStyles + "h-[180px] w-[180px] animate-ping"} />
-      <div className={sharedStyles + "h-[270px] w-[270px]"} />
-      <div className={sharedStyles + "h-[450px] w-[450px]"} />
+      <div className={sharedStyles + "h-[180px] animate-ping"} />
+      <div className={sharedStyles + "h-[270px] "} />
+      <div className={sharedStyles + "h-[450px] "} />
       <div
         className={
-          sharedStyles +
-          "h-[600px] w-[600px] animate-pulse border-green-300 opacity-20"
+          sharedStyles + "h-[580px]  animate-pulse border-green-300 opacity-20"
         }
       />
       <div className={sharedStyles + "h-[700px] w-[700px]"} />

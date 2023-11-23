@@ -19,11 +19,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={inter.className + " p-5 bg-[hsl(20,14.3%,4.1%)] text-white "}
+        className={
+          inter.className + " px-5 text-white h-screen overflow-hidden"
+        }
       >
         <NextUIProvider>
           <Header />
-          {children}
+          <div className="mt-1s0 ">{children}</div>
         </NextUIProvider>
       </body>
     </html>

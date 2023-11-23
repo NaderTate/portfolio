@@ -8,10 +8,8 @@ import Contact from "./components/Contact";
 
 const Home: NextPage = () => {
   return (
-    <div className="snap-y snap-mandatory overflow-scroll z-0 h-screen no-scrollbar ">
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js"></script>
-
-      <section id="hero" className="snap-start h-screen">
+    <div className="snap-y snap-mandatory overflow-y-scroll overflow-x-hidden z-0 h-screen scrollbar-hide ">
+      <section id="hero" className="snap-start">
         <Hero />
       </section>
       <div className=" snap-center" id="about">
@@ -29,6 +27,7 @@ const Home: NextPage = () => {
       <div className="snap-center" id="contact">
         <Contact />
       </div>
+      <div className="absolute bottom-7 right-0 left-0 flex justify-center h-7 w-7 rounded-full border border-white m-auto"></div>
     </div>
   );
 };

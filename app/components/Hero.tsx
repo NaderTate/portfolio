@@ -25,14 +25,14 @@ function Hero({}: Props) {
           alt="Nader Elmahdy"
           width={130}
           height={130}
-          className="rounded-full "
+          className="rounded-full -mt-24"
         />
       </motion.div>
       <div className="z-20">
         <h2 className="text-gray-500 tracking-[15px] pb-2">
           Software Engineer
         </h2>
-        <h1 className="text-5xl lg:text-6xl font-semibold px-10">
+        <h1 className="text-xl sm:text-3xl lg:text-6xl font-semibold px-10">
           <span> {text}</span>
           <Cursor cursorColor="rgb(134 239 172)" />
         </h1>

@@ -8,7 +8,7 @@ type Props = {};
 const Header = (props: Props) => {
   const iconSize = 25;
   return (
-    <header className="sticky top-5 max-w-7xl mx-auto flex justify-between z-20 overflow-x-hidden ">
+    <header className="sticky top-5 -mb-10 max-w-7xl mx-auto flex justify-between z-20 overflow-x-hidden ">
       <motion.div
         initial={{
           x: -500,
