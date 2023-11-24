@@ -18,7 +18,10 @@ const Projects = (props: Props) => {
       <div className=" w-screen flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory z-20 scrollbar-thumb-green-300/80 scrollbar-thin scrollbar-track-gra/20">
         {projects.map((_, i) => {
           return (
-            <div className="lg:p-20 px-8 rounded-xl  my-10 flex-shrink-0 snap-center w-screen overflow-hidden md:p-44 h-screen flex flex-col items-center justify-center space-y-5">
+            <div
+              key={i}
+              className="lg:p-20 px-8 rounded-xl  my-10 flex-shrink-0 snap-center w-screen overflow-hidden md:p-44 h-screen flex flex-col items-center justify-center space-y-5"
+            >
               <motion.div
                 initial={{ y: -100, opacity: 0 }}
                 whileInView={{ y: 0, opacity: 1.5 }}

@@ -37,17 +37,17 @@ function About({}: Props) {
           background
         </h4>
         <p className="text-xs sm:text-base md:text-base text-justify">
-          I'm Nader, Full Stack development is my area of expertise, but I also
-          have experience building small autonomous robots. I started to learn
-          code when I was 15, and I realized that building software that helps
-          other people or solves a problem is my passion. I use some of the
-          applications that I built in my daily life, like my own password
+          I&apos;m Nader, Full Stack development is my area of expertise, but I
+          also have experience building small autonomous robots. I started to
+          learn code when I was 15, and I realized that building software that
+          helps other people or solves a problem is my passion. I use some of
+          the applications that I built in my daily life, like my own password
           manager, and my own music player. In 2023 I got introduced to chatGPT
           and I started my AI journey by building simple chatbots on telegram
           and whastapp. Then I started building real world applications using
-          openAI API or even building my own models. I'm impressed how AI has
-          can solve many problems that were not possible to solve before, and
-          I'm excited to see what the future holds for AI.
+          openAI API or even building my own models. I&apos;m impressed how AI
+          has can solve many problems that were not possible to solve before,
+          and I&apos;m excited to see what the future holds for AI.
         </p>
       </div>
     </motion.div>

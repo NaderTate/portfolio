@@ -30,8 +30,10 @@ const Contact = (props: Props) => {
       </h3>
       <div className="space-y-6 mt-16">
         <h4 className="text-4xl font-semibold text-center">
-          I've got what you need{" "}
-          <span className="underline decoration-green-300/50">Let's talk</span>
+          I&apos;ve got what you need{" "}
+          <span className="underline decoration-green-300/50">
+            Let&apos;s talk
+          </span>
         </h4>
         <div className="flex items-center space-x-5 justify-center">
           <FaWhatsapp size={25} className="animate-pulse text-green-300" />
