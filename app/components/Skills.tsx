@@ -1,9 +1,15 @@
 "use client";
+import { useEffect, useState } from "react";
 import Skill from "./Skill";
 import { motion } from "framer-motion";
 type Props = {};
 
 const Skills = (props: Props) => {
+  const [loaded, setLoaded] = useState(false);
+  useEffect(() => {
+    setLoaded(true);
+  }, []);
+  if (!loaded) return null;
   return (
     <motion.div
       initial={{ opacity: 0 }}
