@@ -14,6 +14,13 @@ type Props = {};
 const Contact = (props: Props) => {
   const { register, handleSubmit } = useForm<Inputs>();
   const onSubmit: SubmitHandler<Inputs> = (formData) => {
+    if (
+      formData.name === "" ||
+      formData.email === "" ||
+      formData.subject === "" ||
+      formData.message === ""
+    )
+      return;
     window.location.href = `mailto:naderate@gmail.com?subject=${formData.subject}&body=${formData.message}`;
   };
   return (
@@ -21,7 +28,7 @@ const Contact = (props: Props) => {
       <h3 className="absolute top-16 uppercase tracking-[20px] text-gray-500 text-2xl">
         Contact
       </h3>
-      <div className="space-y-10">
+      <div className="space-y-6 mt-16">
         <h4 className="text-4xl font-semibold text-center">
           I've got what you need{" "}
           <span className="underline decoration-green-300/50">Let's talk</span>
@@ -67,7 +74,7 @@ const Contact = (props: Props) => {
             rows={5}
             disableAutosize
           />
-          <Button type="submit" fullWidth>
+          <Button type="submit" fullWidth className="font-semibold">
             Submit
           </Button>
         </form>

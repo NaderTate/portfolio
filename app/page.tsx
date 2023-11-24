@@ -5,6 +5,7 @@ import WorkExperience from "./components/WorkExperience";
 import Skills from "./components/Skills";
 import Projects from "./components/Projects";
 import Contact from "./components/Contact";
+import Link from "next/link";
 
 const Home: NextPage = () => {
   return (
@@ -27,7 +28,10 @@ const Home: NextPage = () => {
       <div className="snap-center" id="contact">
         <Contact />
       </div>
-      <div className="absolute bottom-7 right-0 left-0 flex justify-center h-7 w-7 rounded-full border border-white m-auto"></div>
+      <Link
+        href={"#hero"}
+        className="absolute bottom-7 right-0 left-0 flex justify-center h-7 w-7 rounded-full border border-white m-auto"
+      ></Link>
     </div>
   );
 };

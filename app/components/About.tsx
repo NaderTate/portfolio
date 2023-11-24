@@ -10,9 +10,9 @@ function About({}: Props) {
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       transition={{ duration: 1.5 }}
-      className="flex flex-col md:flex-row relative text-center md:text-left  justify-evenly items-center h-screen"
+      className="flex flex-col md:flex-row relative text-center md:text-left  justify-evenly items-center h-screen max-w-7xl m-auto"
     >
-      <h3 className="absolute top-16 md:top-20 px-10 uppercase tracking-[20px] text-gray-500 text-2xl max-w-7xl">
+      <h3 className="absolute top-16 md:top-20 px-10 uppercase tracking-[20px] text-gray-500 text-2xl ">
         About
       </h3>
       <motion.div
@@ -27,7 +27,7 @@ function About({}: Props) {
           alt="Nader Elmahdy"
           width={300}
           height={300}
-          className="rounded-full object-cover w-40 h-40 md:w-64 md:h-64 md:rounded-lg xl:w-[500px] xl:h-[600px] mt-10 md:mt-0"
+          className="rounded-full object-cover w-40 h-40 md:w-64 md:h-64 md:rounded-lg xl:w-[500px] xl:h-[600px] max-h-[80vh] mt-10 md:mt-0"
         />
       </motion.div>
       <div className="space-y-10 px-0 md:px-10">

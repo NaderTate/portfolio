@@ -8,9 +8,16 @@ type Props = {};
 
 function Hero({}: Props) {
   const [text, count] = useTypewriter({
-    words: ["Hi, I'm Nader Elmahdy"],
+    words: [
+      "Hi, This is Nader",
+      "You can cosider me a developer",
+      "But I prefer being",
+      "The solution to your problems",
+    ],
     loop: true,
-    delaySpeed: 2000,
+    typeSpeed: 50,
+    deleteSpeed: 50,
+    delaySpeed: 1500,
   });
   return (
     <div className="h-screen flex flex-col justify-center items-center space-y-8 text-center overflow-hidden">

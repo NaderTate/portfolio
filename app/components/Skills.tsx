@@ -16,24 +16,30 @@ const Skills = (props: Props) => {
       </h3>
 
       <div className="grid-cols-3 sm:grid-cols-4 grid gap-5 ">
-        <Skill img="/assets/images/html.svg" />
-        <Skill img="/assets/images/css.svg" />
-        <Skill img="/assets/images/javascript.svg" />
+        <Skill profiecency={95} img="/assets/images/html.svg" />
+        <Skill profiecency={85} img="/assets/images/css.svg" />
+        <Skill profiecency={80} img="/assets/images/javascript.svg" />
         <Skill
-          directionLeft={window.innerWidth < 648 ? true : false}
+          profiecency={95}
+          directionLeft={window?.innerWidth < 648 ? true : false}
           img="/assets/images/typescript.svg"
         />
-        <Skill directionLeft img="/assets/images/mongodb.svg" />
-        <Skill directionLeft img="/assets/images/prisma.svg" />
-        <Skill directionLeft img="/assets/images/nextjs.svg" />
-        <Skill directionLeft img="/assets/images/react.svg" />
         <Skill
-          directionLeft={window.innerWidth < 648 ? true : false}
+          profiecency={95}
+          directionLeft
+          img="/assets/images/mongodb.svg"
+        />
+        <Skill profiecency={98} directionLeft img="/assets/images/prisma.svg" />
+        <Skill profiecency={97} directionLeft img="/assets/images/nextjs.svg" />
+        <Skill profiecency={93} directionLeft img="/assets/images/react.svg" />
+        <Skill
+          profiecency={78}
+          directionLeft={window?.innerWidth < 648 ? true : false}
           img="/assets/images/sanity.svg"
         />
-        <Skill img="/assets/images/figma.svg" />
-        <Skill img="/assets/images/nodejs.svg" />
-        <Skill img="/assets/images/openAI.svg" />
+        <Skill profiecency={90} img="/assets/images/figma.svg" />
+        <Skill profiecency={89} img="/assets/images/nodejs.svg" />
+        <Skill profiecency={75} img="/assets/images/openAI.svg" />
       </div>
     </motion.div>
   );
