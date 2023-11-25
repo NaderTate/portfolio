@@ -2,9 +2,15 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 
-type Props = {};
+type Props = {
+  img: string;
+  title: string;
+  company: string;
+  summary: string;
+  skills: string[];
+};
 
-const ExperienceCard = (props: Props) => {
+const ExperienceCard = ({ img, title, company, summary, skills }: Props) => {
   return (
     <article className="card flex flex-col rounded-lg items-center space-y-7 flex-shrink-0  w-[300px] md:w-[600px] xl:w-[600px] snap-center p-10 bg-[#292929] lg:opacity-75 transition-opacity">
       <div className="card-content px-5">
@@ -15,7 +21,7 @@ const ExperienceCard = (props: Props) => {
           viewport={{ once: true }}
         >
           <Image
-            src={"/assets/images/athink.svg"}
+            src={img}
             width={100}
             height={100}
             alt="Icon"
@@ -23,30 +29,21 @@ const ExperienceCard = (props: Props) => {
           />
         </motion.div>
         <div className="px-0 md:px-10">
-          <h4 className="text-2xl font-light">Owner of Athink</h4>
-          <p className="font-bold text-xl mt-1">Athink</p>
+          <h4 className="text-2xl font-light">{title}</h4>
+          <p className="font-bold text-xl mt-1">{company}</p>
           <div className="flex gap-x-2 my-2">
-            <Image
-              src={"/assets/images/typescript.svg"}
-              width={30}
-              height={30}
-              alt="Icon"
-              className="rounded-lg"
-            />
-            <Image
-              src={"/assets/images/typescript.svg"}
-              width={30}
-              height={30}
-              alt="Icon"
-              className="rounded-lg"
-            />
-            <Image
-              src={"/assets/images/typescript.svg"}
-              width={30}
-              height={30}
-              alt="Icon"
-              className="rounded-lg"
-            />
+            {skills.map((skill) => {
+              return (
+                <Image
+                  key={skill}
+                  src={skill}
+                  width={30}
+                  height={30}
+                  alt="Icon"
+                  className="rounded-lg"
+                />
+              );
+            })}
           </div>
           {/* <p className="uppercase py-5 text-gray-300">4/2022 - Present</p> */}
           <ul className="list-disc space-y-2 ml-5 text-sm">
