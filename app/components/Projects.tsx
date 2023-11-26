@@ -1,10 +1,35 @@
 "use client";
+import {
+  IoChevronBackCircleOutline,
+  IoChevronForwardCircleOutline,
+} from "react-icons/io5";
 import { motion } from "framer-motion";
-import Image from "next/image";
+import Project from "./Project";
+import { HorizontalScroll } from "../lib/helpers";
+
 type Props = {};
 
 const Projects = (props: Props) => {
-  const projects = [1, 2, 3];
+  const projectsData: { title: string; img: string; summary: string }[] = [
+    {
+      title: "Excel Rank",
+      img: "/assets/images/projects/Excel_Rank.webp",
+      summary:
+        "Excel Rank is a tool that helps business owners save their time by summarizing their business reviews on websites like Yelp. It has also support for Facebook and Instagram where you can summarize comments on each post individually and track its insights.",
+    },
+    {
+      title: "Radio Scoop",
+      img: "/assets/images/projects/Radio_Scoop.webp",
+      summary:
+        "Radio Scoop is a local media company in Egypt. I'm responsible for maintaining and adding new features to the website. Managing and uploading new content.",
+    },
+    {
+      title: "Classified",
+      img: "/assets/images/projects/Classified.webp",
+      summary:
+        "This is a website that I built and I use daily, it's simply a password manager that lets you easily create a unique password for each website you use, and you can copy-paste your email/password with a single click. It doesn't have the auto login feature like other password managers, but maybe we'll get there...",
+    },
+  ];
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -15,44 +40,29 @@ const Projects = (props: Props) => {
       <h3 className="absolute top-20 uppercase tracking-[20px] text-gray-500 text-2xl">
         Projects
       </h3>
-      <div className=" w-screen flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory z-20 scrollbar-thumb-green-300/80 scrollbar-thin scrollbar-track-gra/20">
-        {projects.map((_, i) => {
+      <button
+        className="absolute right-0 top-1/2 transform -translate-y-1/2 z-50"
+        onClick={() => {
+          HorizontalScroll("projectsContainer", window.innerWidth);
+        }}
+      >
+        <IoChevronForwardCircleOutline size={25} />
+      </button>
+      <button
+        className="absolute left-0 top-1/2 transform -translate-y-1/2 z-50  transition-size"
+        onClick={() => {
+          HorizontalScroll("projectsContainer", -window.innerWidth);
+        }}
+      >
+        <IoChevronBackCircleOutline size={25} />
+      </button>
+      <div
+        id="projectsContainer"
+        className=" w-screen flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory z-20 scrollbar-thumb-green-300/80 scrollbar-thin scrollbar-track-gra/20"
+      >
+        {projectsData.map((project, i) => {
           return (
-            <div
-              key={i}
-              className="lg:p-20 px-8 rounded-xl  my-10 flex-shrink-0 snap-center w-screen overflow-hidden md:p-44 h-screen flex flex-col items-center justify-center space-y-5"
-            >
-              <motion.div
-                initial={{ y: -100, opacity: 0 }}
-                whileInView={{ y: 0, opacity: 1.5 }}
-                transition={{ duration: 1.2 }}
-                // viewport={{ once: true }}
-              >
-                <Image
-                  quality={100}
-                  width={900}
-                  height={900}
-                  className="object-contain w-[500px]"
-                  src="/assets/images/projects/Excel_Rank.png"
-                  alt=""
-                />
-              </motion.div>
-              <div className="space-y-10 px-0 md:px-10 max-w-6xl">
-                <h4 className="text-xl font-semibold text-center">
-                  <span className="underline decoration-green-300/50">
-                    Case Study {i + 1} of {projects.length}:
-                  </span>{" "}
-                  Excel Rank
-                </h4>
-                <p className="text-center md:text-left text-lg">
-                  Excel Rank is a tool that helps business owners save their
-                  time by summarizing their business reviews on websites like
-                  Yelp. It has also support for Facebook and Instagram where you
-                  can summarize comments on each post individually and track its
-                  insights.
-                </p>
-              </div>
-            </div>
+            <Project key={i} i={i} total={projectsData.length} {...project} />
           );
         })}
       </div>

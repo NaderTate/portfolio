@@ -6,13 +6,13 @@ type Props = {
   img: string;
   title: string;
   company: string;
-  summary: string;
+  summary: string[];
   skills: string[];
 };
 
 const ExperienceCard = ({ img, title, company, summary, skills }: Props) => {
   return (
-    <article className="card flex flex-col rounded-lg items-center space-y-7 flex-shrink-0  w-[300px] md:w-[600px] xl:w-[600px] snap-center p-10 bg-[#292929] lg:opacity-75 transition-opacity">
+    <article className="h-[500px] md:h-96 card flex flex-col rounded-lg items-center space-y-7 flex-shrink-0  w-[300px] md:w-[600px] xl:w-[600px] snap-center p-10 bg-[#292929] lg:opacity-75 transition-opacity">
       <div className="card-content px-5">
         <motion.div
           initial={{ y: -100, opacity: 0 }}
@@ -47,12 +47,13 @@ const ExperienceCard = ({ img, title, company, summary, skills }: Props) => {
           </div>
           {/* <p className="uppercase py-5 text-gray-300">4/2022 - Present</p> */}
           <ul className="list-disc space-y-2 ml-5 text-sm">
-            <li>
-              Summary Summary Summary Summary Summary Summary Summary Summary
-            </li>
-            <li>Summary Summary Summary Summary</li>
-            <li>Summary</li>
-            <li>Summary</li>
+            {summary.map((item) => {
+              return (
+                <li key={item} className="text-gray-300">
+                  {item}
+                </li>
+              );
+            })}
           </ul>
         </div>
       </div>

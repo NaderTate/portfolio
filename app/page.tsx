@@ -1,3 +1,5 @@
+"use client";
+import { useEffect } from "react";
 import { NextPage } from "next";
 import Hero from "./components/Hero";
 import About from "./components/About";
@@ -8,6 +10,9 @@ import Contact from "./components/Contact";
 import Link from "next/link";
 
 const Home: NextPage = () => {
+  useEffect(() => {
+    require("./lib/script");
+  }, []);
   return (
     <div className="snap-y snap-mandatory overflow-y-scroll overflow-x-hidden z-0 h-screen scrollbar-hide ">
       <section id="hero" className="snap-start">

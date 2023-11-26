@@ -22,7 +22,6 @@ body {
 
 .card {
   display: flex;
-  height: 400px;
   flex-direction: column;
   position: relative;
 }

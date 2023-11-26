@@ -25,11 +25,11 @@ const Contact = (props: Props) => {
   };
   return (
     <div className="min-h-screen flex flex-col relative text-center md:text-left xl:flex-row max-w-7xl px-10 justify-evenly mx-auto items-center">
-      <h3 className="absolute top-16 uppercase tracking-[20px] text-gray-500 text-2xl">
+      <h3 className="absolute top-20 uppercase tracking-[20px] text-gray-500 text-2xl">
         Contact
       </h3>
       <div className="space-y-6 mt-16">
-        <h4 className="text-4xl font-semibold text-center">
+        <h4 className="text-xl sm:text-3xl lg:text-6xl font-semibold text-center">
           I&apos;ve got what you need{" "}
           <span className="underline decoration-green-300/50">
             Let&apos;s talk

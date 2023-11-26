@@ -36,7 +36,7 @@ function About({}: Props) {
           <span className="underline decoration-green-300/50">little</span>{" "}
           background
         </h4>
-        <p className="text-xs sm:text-base md:text-base text-justify">
+        <p className="text-xs sm:text-base text-justify">
           I&apos;m Nader, Full Stack development is my area of expertise, but I
           also have experience building small autonomous robots. I started to
           learn code when I was 15, and I realized that building software that
