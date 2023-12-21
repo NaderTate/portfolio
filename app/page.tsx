@@ -8,6 +8,7 @@ import Skills from "./components/Skills";
 import Projects from "./components/Projects";
 import Contact from "./components/Contact";
 import Link from "next/link";
+import { FaArrowUp } from "react-icons/fa";
 
 const Home: NextPage = () => {
   useEffect(() => {
@@ -35,8 +36,10 @@ const Home: NextPage = () => {
       </div>
       <Link
         href={"#hero"}
-        className="absolute bottom-7 right-0 left-0 flex justify-center h-7 w-7 rounded-full border border-white m-auto"
-      ></Link>
+        className="absolute bottom-7 right-0 left-0 flex justify-center h-7 w-7 rounded-full border border-white m-auto hover:bg-white hover:text-black transition-colors"
+      >
+        <FaArrowUp className="m-auto" />
+      </Link>
     </div>
   );
 };

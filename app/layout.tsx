@@ -25,7 +25,7 @@ export default function RootLayout({
       >
         <NextUIProvider>
           <Header />
-          <div className="mt-1s0 ">{children}</div>
+          {children}
         </NextUIProvider>
       </body>
     </html>

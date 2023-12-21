@@ -23,11 +23,12 @@ function About({}: Props) {
         transition={{ duration: 1 }}
       >
         <Image
-          src="https://res.cloudinary.com/dqkyatgoy/image/upload/v1700644617/me_u8zql5.jpg"
+          src="/assets/images/me.png"
           alt="Nader Elmahdy"
-          width={300}
-          height={300}
-          className="rounded-full object-cover w-40 h-40 md:w-64 md:h-64 md:rounded-lg xl:w-[500px] xl:h-[600px] max-h-[80vh] mt-10 md:mt-0"
+          width={3000}
+          height={3000}
+          quality={100}
+          className=" object-contain w-40 h-40 md:w-64 md:h-64 md:rounded-lg xl:w-[500px] xl:h-[600px] max-h-[80vh] mt-10 md:mt-0"
         />
       </motion.div>
       <div className="space-y-10 px-0 md:px-10">

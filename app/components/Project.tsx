@@ -1,15 +1,17 @@
 "use client";
 import { motion } from "framer-motion";
 import Image from "next/image";
+import Link from "next/link";
 type Props = {
   img: string;
   title: string;
   summary: string;
   i: number;
   total: number;
+  link: string;
 };
 
-const Project = ({ img, title, summary, i, total }: Props) => {
+const Project = ({ img, title, summary, i, total, link }: Props) => {
   return (
     <div
       key={i}
@@ -21,15 +23,17 @@ const Project = ({ img, title, summary, i, total }: Props) => {
         transition={{ duration: 1.2 }}
         // viewport={{ once: true }}
       >
-        <Image
-          priority
-          quality={100}
-          width={3000}
-          height={3000}
-          className="object-contain w-[500px]"
-          src={img}
-          alt={title}
-        />
+        <Link href={link} target="_blank">
+          <Image
+            priority
+            quality={100}
+            width={3000}
+            height={3000}
+            className="object-contain w-[500px]"
+            src={img}
+            alt={title}
+          />
+        </Link>
       </motion.div>
       <div className="space-y-10 px-0 md:px-10 max-w-6xl">
         <h4 className="text-xl font-semibold text-center">
