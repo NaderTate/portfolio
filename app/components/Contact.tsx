@@ -1,18 +1,24 @@
 "use client";
-import { Input, Textarea } from "@nextui-org/input";
+
 import { Button } from "@nextui-org/button";
+import { Input, Textarea } from "@nextui-org/input";
+
 import { FaRegEnvelope, FaWhatsapp } from "react-icons/fa";
+
 import { useForm, SubmitHandler } from "react-hook-form";
+
 type Inputs = {
   name: string;
   email: string;
   subject: string;
   message: string;
 };
+
 type Props = {};
 
-const Contact = (props: Props) => {
+const Contact = ({}: Props) => {
   const { register, handleSubmit } = useForm<Inputs>();
+
   const onSubmit: SubmitHandler<Inputs> = (formData) => {
     if (
       formData.name === "" ||
@@ -23,6 +29,7 @@ const Contact = (props: Props) => {
       return;
     window.location.href = `mailto:naderate@gmail.com?subject=${formData.subject}&body=${formData.message}`;
   };
+
   return (
     <div className="min-h-screen flex flex-col relative text-center md:text-left xl:flex-row max-w-7xl px-10 justify-evenly mx-auto items-center">
       <h3 className="absolute top-20 uppercase tracking-[20px] text-gray-500 text-2xl">

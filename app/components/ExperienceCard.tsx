@@ -1,6 +1,7 @@
 "use client";
-import { motion } from "framer-motion";
+
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 type Props = {
   img: string;
@@ -45,7 +46,6 @@ const ExperienceCard = ({ img, title, company, summary, skills }: Props) => {
               );
             })}
           </div>
-          {/* <p className="uppercase py-5 text-gray-300">4/2022 - Present</p> */}
           <ul className="list-disc space-y-2 ml-5 text-sm">
             {summary.map((item) => {
               return (

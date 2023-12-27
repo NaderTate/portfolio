@@ -1,12 +1,15 @@
 "use client";
-import { MdOutlineEmail } from "react-icons/md";
-import { CiLinkedin } from "react-icons/ci";
-import { FiGithub } from "react-icons/fi";
-import { motion } from "framer-motion";
+
 import Link from "next/link";
+import { motion } from "framer-motion";
+
+import { FiGithub } from "react-icons/fi";
+import { CiLinkedin } from "react-icons/ci";
+import { MdOutlineEmail } from "react-icons/md";
 
 const Header = () => {
   const iconSize = 25;
+
   return (
     <header className="sticky top-5 -mb-10 max-w-7xl mx-auto flex justify-between z-20 overflow-x-hidden ">
       <motion.div
@@ -46,10 +49,12 @@ const Header = () => {
         }}
         transition={{ duration: 1.5 }}
       >
-        <MdOutlineEmail size={iconSize} className="inline-flex" />
-        <p className="uppercase hidden md:inline-flex text-sm ml-2 ">
-          Get in touch
-        </p>
+        <a href="mailto:nadertate@gmail.com" target="_blank">
+          <MdOutlineEmail size={iconSize} className="inline-flex" />
+          <p className="uppercase hidden md:inline-flex text-sm ml-2 ">
+            Get in touch
+          </p>
+        </a>
       </motion.div>
     </header>
   );

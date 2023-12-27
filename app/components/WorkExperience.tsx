@@ -1,14 +1,25 @@
 "use client";
+
+import { useEffect } from "react";
 import { motion } from "framer-motion";
+
 import ExperienceCard from "./ExperienceCard";
-import { HorizontalScroll } from "../lib/helpers";
+
 import {
   IoChevronBackCircleOutline,
   IoChevronForwardCircleOutline,
 } from "react-icons/io5";
+
+import { HorizontalScroll } from "../lib/helpers";
+
 type Props = {};
 
-const WorkExperience = (props: Props) => {
+const WorkExperience = ({}: Props) => {
+  useEffect(() => {
+    require("@/app/lib/script");
+    // the reason I import the script in a useEffect is because I want to make sure that the DOM is loaded before I run the script, otherwise I get an error "document is not defined"
+  }, []);
+
   return (
     <motion.div
       initial={{ opacity: 0 }}

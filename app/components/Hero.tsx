@@ -1,13 +1,16 @@
 "use client";
-import { useTypewriter, Cursor } from "react-simple-typewriter";
-import BackgroundCircles from "./BackgroundCircles";
-import Image from "next/image";
+
 import Link from "next/link";
+import Image from "next/image";
 import { motion } from "framer-motion";
+import { useTypewriter, Cursor } from "react-simple-typewriter";
+
+import BackgroundCircles from "./BackgroundCircles";
+
 type Props = {};
 
 function Hero({}: Props) {
-  const [text, count] = useTypewriter({
+  const [text] = useTypewriter({
     words: [
       "Hi, This is Nader",
       "You can cosider me a developer",
@@ -19,6 +22,7 @@ function Hero({}: Props) {
     deleteSpeed: 50,
     delaySpeed: 1500,
   });
+
   return (
     <div className="h-screen flex flex-col justify-center items-center space-y-8 text-center overflow-hidden">
       <BackgroundCircles />

@@ -1,7 +1,8 @@
 "use client";
-import React from "react";
-import { motion } from "framer-motion";
+
 import Image from "next/image";
+import { motion } from "framer-motion";
+
 type Props = {};
 
 function About({}: Props) {
@@ -23,6 +24,7 @@ function About({}: Props) {
         transition={{ duration: 1 }}
       >
         <Image
+          priority
           src="/assets/images/me.png"
           alt="Nader Elmahdy"
           width={3000}

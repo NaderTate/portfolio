@@ -1,6 +1,8 @@
 "use client";
-import { motion } from "framer-motion";
+
 import Image from "next/image";
+import { motion } from "framer-motion";
+
 type Props = { directionLeft?: boolean; img: string; profiecency: number };
 
 const Skill = ({ directionLeft = false, img, profiecency }: Props) => {

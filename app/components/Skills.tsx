@@ -1,14 +1,19 @@
 "use client";
-import { useEffect, useState } from "react";
-import Skill from "./Skill";
+
 import { motion } from "framer-motion";
+import { useEffect, useState } from "react";
+
+import Skill from "./Skill";
+
 type Props = {};
 
-const Skills = (props: Props) => {
+const Skills = ({}: Props) => {
   const [loaded, setLoaded] = useState(false);
+
   useEffect(() => {
     setLoaded(true);
   }, []);
+
   if (!loaded) return null;
   return (
     <motion.div
@@ -20,7 +25,6 @@ const Skills = (props: Props) => {
       <h3 className="absolute top-20 uppercase tracking-[20px] text-gray-500 text-2xl">
         Skills
       </h3>
-
       <div className="grid-cols-3 sm:grid-cols-4 grid gap-5 ">
         <Skill profiecency={95} img="/assets/images/html.svg" />
         <Skill profiecency={85} img="/assets/images/css.svg" />

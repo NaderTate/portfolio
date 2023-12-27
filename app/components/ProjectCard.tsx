@@ -1,7 +1,9 @@
 "use client";
-import { motion } from "framer-motion";
-import Image from "next/image";
+
 import Link from "next/link";
+import Image from "next/image";
+import { motion } from "framer-motion";
+
 type Props = {
   img: string;
   title: string;
@@ -11,12 +13,9 @@ type Props = {
   link: string;
 };
 
-const Project = ({ img, title, summary, i, total, link }: Props) => {
+const ProjectCard = ({ img, title, summary, i, total, link }: Props) => {
   return (
-    <div
-      key={i}
-      className="lg:p-20 px-8 rounded-xl  my-10 flex-shrink-0 snap-center w-screen overflow-hidden md:p-44 h-screen flex flex-col items-center justify-center space-y-5"
-    >
+    <div className="lg:p-20 px-8 rounded-xl my-10 flex-shrink-0 snap-center w-screen overflow-hidden md:p-44 h-screen flex flex-col items-center justify-center space-y-5">
       <motion.div
         initial={{ y: -100, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1.5 }}
@@ -50,4 +49,4 @@ const Project = ({ img, title, summary, i, total, link }: Props) => {
   );
 };
 
-export default Project;
+export default ProjectCard;
