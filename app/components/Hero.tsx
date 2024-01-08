@@ -13,9 +13,9 @@ function Hero({}: Props) {
   const [text] = useTypewriter({
     words: [
       "Hi, This is Nader",
-      "You can cosider me a developer",
-      "But I prefer being",
-      "The solution to your problems",
+      "<ProblemSolver />",
+      "<AI_Developer />",
+      "<NoRest />",
     ],
     loop: true,
     typeSpeed: 50,
@@ -41,7 +41,7 @@ function Hero({}: Props) {
       </motion.div>
       <div className="z-20">
         <h2 className="text-gray-500 tracking-[15px] pb-2">
-          Software Engineer
+          🥷 Full Stack Developer
         </h2>
         <h1 className="text-xl sm:text-3xl lg:text-6xl font-semibold px-10">
           <span> {text}</span>

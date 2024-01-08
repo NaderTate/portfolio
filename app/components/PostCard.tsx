@@ -1,5 +1,5 @@
 import Link from "next/link";
-import Image from "next/image";
+import { Image } from "@nextui-org/image";
 
 type Props = {
   post: Post;
@@ -20,7 +20,7 @@ const PostCard = ({ post }: Props) => {
             src={post.thumbnail}
             alt={post.title}
           />
-          <div className="absolute w-full bottom-0 bg-opacity-20 bg-black backdrop-blur-lg rounded drop-shadow-lg text-white px-5 py-2 flex justify-between items-center">
+          <div className="absolute w-full bottom-0 bg-opacity-20 bg-black backdrop-blur-lg rounded drop-shadow-lg text-white px-5 py-2 flex justify-between items-center z-20">
             <div>
               <p className="line-clamp-1"> {post.title}</p>
               <p className="line-clamp-1 text-xs ">{post.description}</p>

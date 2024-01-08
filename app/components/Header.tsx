@@ -24,16 +24,22 @@ const Header = () => {
           scale: 1,
         }}
         transition={{ duration: 1.5 }}
-        className="flex items-center gap-2"
+        className="flex items-center gap-5"
       >
+        <Link href="https://github.com/NaderTate" target="_blank">
+          <FiGithub size={iconSize} />
+        </Link>
         <Link
           href="https://www.linkedin.com/in/nader-elmahdy-1b8557272/"
           target="_blank"
         >
           <CiLinkedin size={iconSize} />
         </Link>
-        <Link href="https://github.com/NaderTate" target="_blank">
-          <FiGithub size={iconSize} />
+        <Link
+          href="https://drive.google.com/file/d/1OKtVAjo-yjkQUKqWJctt4vuGkCRmpz0-/view?usp=drive_link"
+          target="_blank"
+        >
+          Resume
         </Link>
       </motion.div>
       <motion.div
