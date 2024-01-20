@@ -36,7 +36,7 @@ const Header = () => {
           <CiLinkedin size={iconSize} />
         </Link>
         <Link
-          href="https://drive.google.com/file/d/1OKtVAjo-yjkQUKqWJctt4vuGkCRmpz0-/view?usp=drive_link"
+          href="https://drive.google.com/file/d/1VnWJRLjbp74d1Lt7umILA8A5cet9hIFS/view?usp=drive_link"
           target="_blank"
         >
           Resume
