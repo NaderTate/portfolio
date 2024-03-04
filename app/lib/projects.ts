@@ -5,18 +5,18 @@ export const projectsData: {
   link: string;
 }[] = [
   {
-    title: "Excel Rank",
-    img: "/assets/images/projects/Excel_Rank.webp",
-    summary:
-      "Excel Rank is a tool that helps business owners save their time by summarizing their business reviews on websites like Yelp. It has also support for Facebook and Instagram where you can summarize comments on each post individually and track its insights.",
-    link: "https://excelrank.vercel.app/",
-  },
-  {
     title: "Nader Express",
     img: "/assets/images/projects/Nader_Express.webp",
     summary:
       "Nader Express is a full Ecommerce website that I built, it has a full admin panel where you can manage your products, orders, and customers. The admin gets a WhatsApp notification when a new order is placed. It's built from scratch using Next JS 14 server actions, clerk for store authentication, and next-auth for admin panel authentication.",
     link: "https://naderexpress.vercel.app/",
+  },
+  {
+    title: "Radio Scoop",
+    img: "/assets/images/projects/Radio_Scoop.webp",
+    summary:
+      "Radio Scoop is a local media company in Egypt. I'm responsible for maintaining and adding new features to the website. Managing and uploading new content.",
+    link: "https://radio-scoop.com/",
   },
   {
     title: "Nailed it",
@@ -26,11 +26,11 @@ export const projectsData: {
     link: "https://nailed-it.tech",
   },
   {
-    title: "Radio Scoop",
-    img: "/assets/images/projects/Radio_Scoop.webp",
+    title: "Excel Rank",
+    img: "/assets/images/projects/Excel_Rank.webp",
     summary:
-      "Radio Scoop is a local media company in Egypt. I'm responsible for maintaining and adding new features to the website. Managing and uploading new content.",
-    link: "https://radio-scoop.com/",
+      "Excel Rank is a tool that helps business owners save their time by summarizing their business reviews on websites like Yelp. It has also support for Facebook and Instagram where you can summarize comments on each post individually and track its insights.",
+    link: "https://excelrank.vercel.app/",
   },
   {
     title: "Classified",
